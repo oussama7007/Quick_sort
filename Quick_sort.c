@@ -2,12 +2,12 @@
 
 
 void quicksort(int arr[], int len);
-void quicksort_recurdion(int arr[], int low, int high);
+void quicksort_recurtion(int arr[], int low, int high);
 int partition(int arr[], int low, int high);
 
 
 
-void	swap(int *x, int *y)
+void	swap(int *a, int *y)
 {
 	int tmp;
 
@@ -20,7 +20,7 @@ void quicksort(int arr[], int len)
 {
 	quicksort_recurtion(arr, 0, len - 1);
 }
-void quicksort_recurtion(int arr, int low, int high)
+void quicksort_recurtion(int arr[], int low, int high)
 {
 	if(low < high)
 	{
@@ -30,7 +30,7 @@ void quicksort_recurtion(int arr, int low, int high)
 	}
 }
 
-int partition(int arr[], int low, int high);
+int partition(int arr[], int low, int high)
 {
 	int pivot_value  = arr[high];
 	int i = low;
@@ -56,7 +56,7 @@ int main()
 	int arr[] = {0,1,78,55,77,566,44,5,5,2};
 	int len = sizeof(arr)/sizeof(int);
 	
-	quicksort(arr, int len);
+	quicksort(arr, len);
 	
 	while(i < len)
 	{
